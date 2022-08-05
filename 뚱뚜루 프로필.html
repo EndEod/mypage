@@ -1,97 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="르탄이 - 프로필 링크">
-    <meta property="og:description" content="어서와 코딩은 처음이지?">
-    <meta property="og:image" content="공유할 이미지">
-    <title>르탄이 - 프로필 링크</title>
+    <meta property="og:title" content="뚱뚜루 - 수수또">
+    <meta property="og:description" content="#뚱뚜루 #수수또 #전국민 내집 가지기">
+    <meta property="og:image" content="뚱뚜루-1.png">
+    <title>뚱뚜루 - 수수또 팬 페이지</title>
     <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
         * {
             font-family: "Pretendard",serif;
         }
         body {
-            background-color: #44398A;
-        }
-        .profile {
-            width: 100px;
-            height: 100px;
-
-            border-radius: 100%;
-
-            border : 2px solid white;
-
-            background-color: rgb(211, 181, 14);
-            background-image: ur1('뚱뚜루.jpeg');
+            background-image: url('뚱뚜루-배경.png');
             background-position: center;
             background-size: cover;
+            height: 100vh;
+          }
+        .pro {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(35px);
+            width: 320px;
+            height: 230px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            background-image: url('뚱뚜루-1.png');
+            background-position: center;
+            background-size: 95px 95px;
+            background-position: center;
         }
         .main {
-            color: white;
+            color : #000000;
             font-size: 20px;
-
-            margin-top: 30px;
+            size : 20px;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
         .sub {
-            color: white;
-            font-size: 14px;
-
+            color : #000000;
+            font-size: 16px;
+            font-weight: 500;
+            size : 14px;
             margin-top: 0px;
+            margin-bottom: 2px;
+        }
+        .subs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 13px;
         }
         .wrap {
-            background-color: green;
             width: 300px;
             margin: 30px auto 0px auto;
-            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .wrap > a {
-            width: 300px;
-            height: 50px;
-
-            background-color: white;
+        .bigbutton {
+            width: 320px;
+            height: 60px;
             border-radius: 8px;
-
-            margin-bottom: 10px;
-
-            font-size: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(35px);
+            margin-bottom: 12px;
+            font-size: 17px;
             font-weight: bold;
-            color: #44398A;
-
+            color:#000000;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
             text-decoration: none;
-
-            box-shadow: 3px 3px 5px 0px black;
+        }
+        .source {
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
         }
         .wrap > a:hover {
-            background-color: #f2f2f2;
-
-            font-size: 15px;
-        }
+            background-color: #fcd83b48;
     </style>
 </head>
 <body>
     <div class="wrap">
-        <div class="profile"></div>
-        <h1 class="main">뚱뚜루-수수또</h1>
-        <p class="sub">그린리모델링.. 어떠신가요?</p>
-
-        <a target="_blank" href="https://cafe.naver.com/gnygroup/">(주)여기건축사사무소 네이버카페</a>
-        <a target="_blank" href="https://smartstore.naver.com/metagreenremodeling/">뚱뚜루 스마트 스토어</a>
-        <a target="_blank" href="https://www.instagram.com/gny.group.archi/">(주)여기건축사사무소 인스타</a>
-        <a target="_blank" href="https://www.instagram.com/kiendeod/">뚱뚜루 인스타</a>
+        <div class="pro">
+            <div class="profile"></div>
+            <h1 class="main">뚱뚜루 - 수수또</h1>
+            <div class="subs">
+                <p class="sub">#뚱뚜루</p>
+                <p class="sub">#수수또</p>
+                <p class="sub">#전국민 내집 가지기</p>
+            </div>
+        </div>
+        <a class="bigbutton"target="_blank" href="https://cafe.naver.com/gnygroup/">(주)여기건축사사무소 네이버카페</a>
+        <a class="bigbutton"target="_blank" href="https://www.instagram.com/gny.group.archi/">(주)여기건축사사무소 인스타</a>
+        <a class="bigbutton"target="_blank" href="https://cafe.naver.com/metagreenremodeling/">(주)GnY Architec.Tech 네이버카페</a>
+        <a class="bigbutton"target="_blank" href="https://smartstore.naver.com/metagreenremodeling/">뚱뚜루 네이버스마트스토어</a>
+        <p class="source">made by 뚱뚜루</p>
     </div>
-    
 </body>
 </html>
