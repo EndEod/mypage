@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,52 +12,55 @@
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
         * { font-family: "Pretendard", serif; box-sizing: border-box; }
         body {
-            background-image: url('뚱뚜루-배경.png');
-            background-position: center;
-            background-size: cover;
+            /* [수정] 화사하고 은은한 그라데이션 배경 */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .wrap {
             width: 100%;
-            max-width: 380px;
-            padding: 40px 20px;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .pro {
-            background: rgba(255, 255, 255, 0.7);
+            /* [수정] 더 투명하고 깨끗한 유리 효과 */
+            background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             width: 100%;
             padding: 30px 20px;
-            border-radius: 20px;
-            margin-bottom: 30px;
+            border-radius: 24px;
+            margin-bottom: 25px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
         .profile {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
+            /* [체크] 깃허브에 올린 파일명과 동일해야 함 */
             background-image: url('뚱뚜루-1.png');
             background-size: cover;
             background-position: center;
             margin-bottom: 15px;
-            border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         .main {
-            color : #1a1a1a;
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
+            color : #2c3e50;
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0 0 12px 0;
+            text-align: center;
         }
         .subs {
             display: flex;
@@ -66,61 +69,75 @@
             gap: 8px;
         }
         .sub {
-            color : #444;
+            color : #555;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             margin: 0;
-            background: rgba(255,255,255,0.5);
-            padding: 4px 8px;
-            border-radius: 12px;
+            background: rgba(255,255,255,0.7);
+            padding: 6px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
-        /* 섹션 구분용 타이틀 */
         .section-title {
-            color: white;
-            font-size: 14px;
-            margin: 20px 0 10px 0;
-            font-weight: 600;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            color: #7f8c8d;
+            font-size: 15px;
+            margin: 25px 0 12px 0;
+            font-weight: 700;
             align-self: flex-start;
-            padding-left: 5px;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: #27ae60; /* 포인트 컬러 */
+            margin-right: 8px;
+            border-radius: 2px;
         }
 
         .bigbutton {
             width: 100%;
-            height: 60px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            margin-bottom: 12px;
-            font-size: 16px;
+            height: 64px;
+            border-radius: 16px;
+            /* [수정] 깔끔한 화이트 버튼 & 부드러운 그림자 */
+            background: #ffffff;
+            margin-bottom: 14px;
+            font-size: 17px;
             font-weight: 700;
-            color: #333;
+            color: #34495e;
             display: flex;
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         .bigbutton:hover {
-            background-color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        /* 강조 버튼 스타일 */
+
+        /* [수정] 네이버 스마트스토어 강조 스타일 */
         .highlight {
-            border: 2px solid #00c73c; /* 네이버 그린 컬러 */
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); /* 네이버 스타일 그린/민트 */
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
+        }
+        .highlight:hover {
+             box-shadow: 0 8px 25px rgba(0, 184, 148, 0.6);
         }
 
         .source {
-            margin-top: 30px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
-            font-weight: 400;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #95a5a6;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -132,11 +149,11 @@
             <div class="subs">
                 <p class="sub">#망한도면소생술</p>
                 <p class="sub">#그린리모델링</p>
-                <p class="sub">#건축사사무소</p>
+                <p class="sub">#스마트건축</p>
             </div>
         </div>
 
-        <div class="section-title">✨ 무료 체험하기</div>
+        <div class="section-title">체험하기</div>
         <a class="bigbutton" target="_blank" href="https://yugy.site">
             🏠 3D 도면 만들기 (yugy.site)
         </a>
@@ -144,7 +161,7 @@
             📖 도면소생술 사용설명서 (블로그)
         </a>
 
-        <div class="section-title">🔥 뚱뚜루의 솔루션 (스마트스토어)</div>
+        <div class="section-title">뚱뚜루 솔루션 (스토어)</div>
         
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12770673161">
             🚑 망한 도면 소생술 키트 (엑셀)
@@ -155,16 +172,16 @@
         </a>
 
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12777263769">
-            ⚖️ 위반건축물 양성화 가능여부 진단
+            ⚖️ 위반건축물 양성화 진단
         </a>
 
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12755731793">
             🏗️ 예비 건축주 입문 컨설팅
         </a>
 
-        <div class="section-title">🔗 공식 채널</div>
+        <div class="section-title">공식 채널</div>
         <a class="bigbutton" target="_blank" href="https://yugy.store">
-            🛒 뚱뚜루 공식 스토어 (yugy.store)
+            🛒 공식 스토어 (yugy.store)
         </a>
         <a class="bigbutton" target="_blank" href="https://www.instagram.com/gny.group.archi/">
             📷 인스타그램 (@gny.group.archi)
@@ -173,7 +190,7 @@
             ☕ 네이버 공식 카페
         </a>
 
-        <p class="source">Designed by Ddungdduru</p>
+        <p class="source">© 2024 Ddungdduru Archilab.</p>
     </div>
 </body>
 </html>
