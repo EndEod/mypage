@@ -12,7 +12,6 @@
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
         * { font-family: "Pretendard", serif; box-sizing: border-box; }
         body {
-            /* [수정] 화사하고 은은한 그라데이션 배경 */
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
             margin: 0;
@@ -29,7 +28,6 @@
             align-items: center;
         }
         .pro {
-            /* [수정] 더 투명하고 깨끗한 유리 효과 */
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -47,7 +45,6 @@
             width: 110px;
             height: 110px;
             border-radius: 50%;
-            /* [체크] 깃허브에 올린 파일명과 동일해야 함 */
             background-image: url('뚱뚜루-1.png');
             background-size: cover;
             background-position: center;
@@ -94,7 +91,7 @@
             display: inline-block;
             width: 4px;
             height: 16px;
-            background-color: #27ae60; /* 포인트 컬러 */
+            background-color: #27ae60;
             margin-right: 8px;
             border-radius: 2px;
         }
@@ -103,10 +100,9 @@
             width: 100%;
             height: 64px;
             border-radius: 16px;
-            /* [수정] 깔끔한 화이트 버튼 & 부드러운 그림자 */
             background: #ffffff;
             margin-bottom: 14px;
-            font-size: 17px;
+            font-size: 16px; /* 글씨 크기 살짝 조정 */
             font-weight: 700;
             color: #34495e;
             display: flex;
@@ -122,9 +118,8 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        /* [수정] 네이버 스마트스토어 강조 스타일 */
         .highlight {
-            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); /* 네이버 스타일 그린/민트 */
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
             color: white;
             border: none;
             box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
@@ -164,11 +159,11 @@
         <div class="section-title">뚱뚜루 솔루션 (스토어)</div>
         
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12770673161">
-            🚑 망한 도면 소생술 키트 (엑셀)
+            🚑 망한 DIY 도면 유료 소생술 (엑셀)
         </a>
         
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12728705402">
-            🌿 그린리모델링 현장 진단 (착수금)
+            🌿 그린리모델링 현장 진단
         </a>
 
         <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12777263769">
@@ -179,7 +174,12 @@
             🏗️ 예비 건축주 입문 컨설팅
         </a>
 
-        <div class="section-title">공식 채널</div>
+        <div class="section-title">(주)여기건축사사무소 공식 채널</div>
+        
+        <a class="bigbutton" target="_blank" href="https://yugy.org">
+            🌐 공식 홈페이지 (yugy.org)
+        </a>
+
         <a class="bigbutton" target="_blank" href="https://yugy.store">
             🛒 공식 스토어 (yugy.store)
         </a>
@@ -190,7 +190,7 @@
             ☕ 네이버 공식 카페
         </a>
 
-        <p class="source">© 2024 Ddungdduru Archilab.</p>
+        <p class="source">© 2024 (주)여기건축사사무소.</p>
     </div>
 </body>
 </html>
