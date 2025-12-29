@@ -4,113 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="뚱뚜루 - 수수또">
-    <meta property="og:description" content="#뚱뚜루 #수수또 #전국민 내집 가지기">
+    <meta property="og:title" content="건축사 뚱뚜루 - 수수또">
+    <meta property="og:description" content="망한 도면 소생술 & 그린리모델링 전문">
     <meta property="og:image" content="뚱뚜루-1.png">
-    <title>뚱뚜루 - 수수또 팬 페이지</title>
+    <title>뚱뚜루의 건축 연구소</title>
     <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        * {
-            font-family: "Pretendard",serif;
-        }
+        * { font-family: "Pretendard", serif; box-sizing: border-box; }
         body {
             background-image: url('뚱뚜루-배경.png');
             background-position: center;
             background-size: cover;
-            height: 100vh;
-          }
-        .pro {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(35px);
-            width: 320px;
-            height: 230px;
-            border-radius: 8px;
-            margin-bottom: 60px;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .wrap {
+            width: 100%;
+            max-width: 380px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
+        .pro {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            width: 100%;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
         .profile {
-            width: 90px;
-            height: 90px;
-            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             background-image: url('뚱뚜루-1.png');
+            background-size: cover;
             background-position: center;
-            background-size: 95px 95px;
-            background-position: center;
+            margin-bottom: 15px;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .main {
-            color : #000000;
-            font-size: 20px;
-            size : 20px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .sub {
-            color : #000000;
-            font-size: 16px;
-            font-weight: 500;
-            size : 14px;
-            margin-top: 0px;
-            margin-bottom: 2px;
+            color : #1a1a1a;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
         }
         .subs {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            gap: 13px;
+            gap: 8px;
         }
-        .wrap {
-            width: 300px;
-            margin: 30px auto 0px auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .sub {
+            color : #444;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
+            background: rgba(255,255,255,0.5);
+            padding: 4px 8px;
+            border-radius: 12px;
         }
+        
+        /* 섹션 구분용 타이틀 */
+        .section-title {
+            color: white;
+            font-size: 14px;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            align-self: flex-start;
+            padding-left: 5px;
+        }
+
         .bigbutton {
-            width: 320px;
+            width: 100%;
             height: 60px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(35px);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             margin-bottom: 12px;
-            font-size: 17px;
-            font-weight: bold;
-            color:#000000;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
+        .bigbutton:hover {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            color: #000;
+        }
+        /* 강조 버튼 스타일 */
+        .highlight {
+            border: 2px solid #00c73c; /* 네이버 그린 컬러 */
+            background: rgba(255, 255, 255, 0.95);
+        }
+
         .source {
-            font-size: 17px;
-            color: white;
-            font-weight: 500;
+            margin-top: 30px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 400;
         }
-        .wrap > a:hover {
-            background-color: #fcd83b48;
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="pro">
             <div class="profile"></div>
-            <h1 class="main">뚱뚜루 - 수수또</h1>
+            <h1 class="main">건축사 뚱뚜루</h1>
             <div class="subs">
-                <p class="sub">#뚱뚜루</p>
-                <p class="sub">#수수또</p>
-                <p class="sub">#전국민 내집 가지기</p>
+                <p class="sub">#망한도면소생술</p>
+                <p class="sub">#그린리모델링</p>
+                <p class="sub">#건축사사무소</p>
             </div>
         </div>
-        <a class="bigbutton"target="_blank" href="https://cafe.naver.com/gnygroup/">(주)여기건축사사무소 네이버카페</a>
-        <a class="bigbutton"target="_blank" href="https://www.instagram.com/gny.group.archi/">(주)여기건축사사무소 인스타</a>
-        <a class="bigbutton"target="_blank" href="https://cafe.naver.com/metagreenremodeling/">(주)GnY Architec.Tech 네이버카페</a>
-        <a class="bigbutton"target="_blank" href="https://smartstore.naver.com/metagreenremodeling/">뚱뚜루 네이버스마트스토어</a>
-        <p class="source">made by 뚱뚜루</p>
+
+        <div class="section-title">✨ 무료 체험하기</div>
+        <a class="bigbutton" target="_blank" href="https://yugy.site">
+            🏠 3D 도면 만들기 (yugy.site)
+        </a>
+        <a class="bigbutton" target="_blank" href="https://blog.naver.com/grenarch/224104948092">
+            📖 도면소생술 사용설명서 (블로그)
+        </a>
+
+        <div class="section-title">🔥 뚱뚜루의 솔루션 (스마트스토어)</div>
+        
+        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12770673161">
+            🚑 망한 도면 소생술 키트 (엑셀)
+        </a>
+        
+        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12728705402">
+            🌿 그린리모델링 현장 진단 (착수금)
+        </a>
+
+        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12777263769">
+            ⚖️ 위반건축물 양성화 가능여부 진단
+        </a>
+
+        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12755731793">
+            🏗️ 예비 건축주 입문 컨설팅
+        </a>
+
+        <div class="section-title">🔗 공식 채널</div>
+        <a class="bigbutton" target="_blank" href="https://yugy.store">
+            🛒 뚱뚜루 공식 스토어 (yugy.store)
+        </a>
+        <a class="bigbutton" target="_blank" href="https://www.instagram.com/gny.group.archi/">
+            📷 인스타그램 (@gny.group.archi)
+        </a>
+        <a class="bigbutton" target="_blank" href="https://cafe.naver.com/gnygroup/">
+            ☕ 네이버 공식 카페
+        </a>
+
+        <p class="source">Designed by Ddungdduru</p>
     </div>
 </body>
 </html>
