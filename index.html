@@ -1,196 +1,475 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="건축사 뚱뚜루 - 수수또">
-    <meta property="og:description" content="망한 도면 소생술 & 그린리모델링 전문">
-    <meta property="og:image" content="뚱뚜루-1.png">
-    <title>뚱뚜루의 건축 연구소</title>
-    <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        * { font-family: "Pretendard", serif; box-sizing: border-box; }
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .wrap {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .pro {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            width: 100%;
-            padding: 30px 20px;
-            border-radius: 24px;
-            margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        .profile {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background-image: url('뚱뚜루-1.png');
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 15px;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .main {
-            color : #2c3e50;
-            font-size: 24px;
-            font-weight: 800;
-            margin: 0 0 12px 0;
-            text-align: center;
-        }
-        .subs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-        }
-        .sub {
-            color : #555;
-            font-size: 14px;
-            font-weight: 600;
-            margin: 0;
-            background: rgba(255,255,255,0.7);
-            padding: 6px 12px;
-            border-radius: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        
-        .section-title {
-            color: #7f8c8d;
-            font-size: 15px;
-            margin: 25px 0 12px 0;
-            font-weight: 700;
-            align-self: flex-start;
-            padding-left: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .section-title::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 16px;
-            background-color: #27ae60;
-            margin-right: 8px;
-            border-radius: 2px;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .bigbutton {
-            width: 100%;
-            height: 64px;
-            border-radius: 16px;
-            background: #ffffff;
-            margin-bottom: 14px;
-            font-size: 16px;
-            font-weight: 700;
-            color: #34495e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .bigbutton:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
+  <meta property="og:title" content="건축사 뚱뚜루 | YUGY DESIGN GROUP">
+  <meta property="og:description" content="도면소생술 · 스페이스 오디터 · 그린리모델링 · 건축 전 사전진단">
+  <meta property="og:image" content="뚱뚜루-1.png">
 
-        .highlight {
-            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
-        }
-        .highlight:hover {
-             box-shadow: 0 8px 25px rgba(0, 184, 148, 0.6);
-        }
+  <title>건축사 뚱뚜루 | YUGY DESIGN GROUP</title>
 
-        .source {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #95a5a6;
-            font-weight: 500;
-        }
-    </style>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+    * {
+      font-family: "Pretendard", sans-serif;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #22332d;
+      --muted: #63706b;
+      --green: #0f8f6f;
+      --green-dark: #087054;
+      --mint: #e8f5ef;
+      --cream: #f8f4ea;
+      --paper: rgba(255, 255, 255, 0.86);
+      --line: rgba(20, 80, 64, 0.10);
+      --shadow: 0 18px 45px rgba(26, 48, 40, 0.14);
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 22px 16px 34px;
+      color: var(--ink);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(15, 143, 111, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(219, 178, 86, 0.14), transparent 30%),
+        linear-gradient(145deg, #fbf7ee 0%, #eef7f2 52%, #e5eee9 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.15));
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.15));
+    }
+
+    .wrap {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      z-index: 1;
+    }
+
+    .hero {
+      width: 100%;
+      padding: 28px 22px 24px;
+      border-radius: 28px;
+      background: var(--paper);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .profile {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      background-image: url('뚱뚜루-1.png');
+      background-size: cover;
+      background-position: center;
+      border: 5px solid #ffffff;
+      box-shadow: 0 12px 28px rgba(31, 61, 50, 0.16);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef8f3;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .main {
+      margin: 0;
+      color: var(--ink);
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.18;
+    }
+
+    .brand {
+      margin: 6px 0 0;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .intro {
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.55;
+      max-width: 330px;
+      word-break: keep-all;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(15, 143, 111, 0.13);
+      color: #4f625b;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 10px;
+      padding-left: 6px;
+      color: #4c5f58;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 18px;
+      border-radius: 99px;
+      background: var(--green);
+      display: inline-block;
+    }
+
+    .link-card {
+      width: 100%;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
+      color: var(--ink);
+      text-decoration: none;
+      margin-bottom: 11px;
+      box-shadow: 0 9px 24px rgba(31, 61, 50, 0.10);
+      border: 1px solid rgba(255,255,255,0.78);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border 0.22s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 34px rgba(31, 61, 50, 0.17);
+      border: 1px solid rgba(15, 143, 111, 0.25);
+    }
+
+    .link-card.primary {
+      background: linear-gradient(135deg, #0f8f6f 0%, #0bb39b 100%);
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(15, 143, 111, 0.31);
+    }
+
+    .link-card.dark {
+      background: linear-gradient(135deg, #23352f 0%, #38594d 100%);
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(34, 51, 45, 0.25);
+    }
+
+    .icon {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      background: var(--mint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .primary .icon,
+    .dark .icon {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .text {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .label {
+      display: block;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .desc {
+      display: block;
+      margin-top: 5px;
+      color: rgba(34, 51, 45, 0.66);
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.35;
+      word-break: keep-all;
+    }
+
+    .primary .desc,
+    .dark .desc {
+      color: rgba(255,255,255,0.80);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .mini-card {
+      min-height: 82px;
+      padding: 15px 13px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid rgba(255,255,255,0.72);
+      box-shadow: 0 8px 20px rgba(31, 61, 50, 0.08);
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .mini-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 13px 28px rgba(31, 61, 50, 0.13);
+    }
+
+    .mini-emoji {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .mini-title {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 16px 17px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.66);
+      border: 1px solid rgba(255,255,255,0.75);
+      color: #5b6b65;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.58;
+      word-break: keep-all;
+      box-shadow: 0 8px 22px rgba(31, 61, 50, 0.07);
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: #7b8984;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 360px) {
+      body {
+        padding: 16px 12px 28px;
+      }
+
+      .hero {
+        padding: 24px 18px 22px;
+      }
+
+      .main {
+        font-size: 24px;
+      }
+
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="wrap">
-        <div class="pro">
-            <div class="profile"></div>
-            <h1 class="main">건축사 뚱뚜루</h1>
-            <div class="subs">
-                <p class="sub">#망한도면소생술</p>
-                <p class="sub">#그린리모델링</p>
-                <p class="sub">#스마트건축</p>
-            </div>
+  <main class="wrap">
+
+    <section class="hero">
+      <div class="profile"></div>
+      <div class="eyebrow">🏡 건축 전, 먼저 판단하는 곳</div>
+      <h1 class="main">건축사 뚱뚜루</h1>
+      <p class="brand">YUGY DESIGN GROUP</p>
+      <p class="intro">
+        집을 고치거나 짓기 전,<br>
+        도면 · 예산 · 리스크 · 순서를 먼저 정리합니다.
+      </p>
+
+      <div class="chips">
+        <span class="chip">#도면소생술</span>
+        <span class="chip">#스페이스오디터</span>
+        <span class="chip">#그린리모델링</span>
+        <span class="chip">#BIM진단</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">처음 오셨다면 여기부터</h2>
+
+      <a class="link-card primary" target="_blank" href="https://space-auditor.com">
+        <div class="icon">🧭</div>
+        <div class="text">
+          <span class="label">스페이스 오디터 사전진단</span>
+          <span class="desc">공사 전, 내 집의 리스크와 순서를 먼저 확인하세요.</span>
         </div>
+      </a>
 
-        <div class="section-title">체험하기</div>
-        <a class="bigbutton" target="_blank" href="https://yugy.site">
-            🏠 3D 도면 만들기 (yugy.site)
-        </a>
-        <a class="bigbutton" target="_blank" href="https://blog.naver.com/grenarch/224104948092">
-            📖 도면소생술 사용설명서 (블로그)
+      <a class="link-card dark" target="_blank" href="https://yugy.site">
+        <div class="icon">📐</div>
+        <div class="text">
+          <span class="label">도면소생술 바로가기</span>
+          <span class="desc">내 집 도면과 면적을 직접 확인해보는 2D · 3D 도구입니다.</span>
+        </div>
+      </a>
+
+      <a class="link-card" target="_blank" href="https://talk.naver.com/W4HB1I">
+        <div class="icon">💬</div>
+        <div class="text">
+          <span class="label">상담 문의 남기기</span>
+          <span class="desc">지금 상황을 간단히 남겨주시면 확인 후 안내드립니다.</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">상황별로 필요한 서비스</h2>
+
+      <a class="link-card" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12770673161">
+        <div class="icon">🚑</div>
+        <div class="text">
+          <span class="label">망한 DIY 도면 유료 소생술</span>
+          <span class="desc">직접 만든 도면이 헷갈릴 때, 건축사가 구조를 잡아드립니다.</span>
+        </div>
+      </a>
+
+      <a class="link-card" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12728705402">
+        <div class="icon">🌿</div>
+        <div class="text">
+          <span class="label">그린리모델링 현장 진단</span>
+          <span class="desc">단열, 창호, 에너지 절감 가능성을 공사 전 검토합니다.</span>
+        </div>
+      </a>
+
+      <a class="link-card" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12777263769">
+        <div class="icon">⚖️</div>
+        <div class="text">
+          <span class="label">위반건축물 양성화 진단</span>
+          <span class="desc">무작정 공사하기 전, 법적 리스크부터 확인합니다.</span>
+        </div>
+      </a>
+
+      <a class="link-card" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12755731793">
+        <div class="icon">🏗️</div>
+        <div class="text">
+          <span class="label">예비 건축주 입문 컨설팅</span>
+          <span class="desc">집짓기, 리모델링, 용도변경을 어디서 시작할지 정리합니다.</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">읽고, 보고, 더 알아보기</h2>
+
+      <div class="mini-grid">
+        <a class="mini-card" target="_blank" href="https://blog.naver.com/grenarch/224104948092">
+          <span class="mini-emoji">📖</span>
+          <span class="mini-title">도면소생술<br>사용설명서</span>
         </a>
 
-        <div class="section-title">뚱뚜루 솔루션 (스토어)</div>
-        
-        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12770673161">
-            🚑 망한 DIY 도면 유료 소생술 (엑셀)
-        </a>
-        
-        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12728705402">
-            🌿 그린리모델링 현장 진단
+        <a class="mini-card" target="_blank" href="https://yugy.org">
+          <span class="mini-emoji">🌐</span>
+          <span class="mini-title">공식 홈페이지<br>yugy.org</span>
         </a>
 
-        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12777263769">
-            ⚖️ 위반건축물 양성화 진단
+        <a class="mini-card" target="_blank" href="https://yugy.store">
+          <span class="mini-emoji">🛒</span>
+          <span class="mini-title">공식 스토어<br>yugy.store</span>
         </a>
 
-        <a class="bigbutton highlight" target="_blank" href="https://smartstore.naver.com/kiendeod_susutto/products/12755731793">
-            🏗️ 예비 건축주 입문 컨설팅
+        <a class="mini-card" target="_blank" href="https://cafe.naver.com/gnygroup/">
+          <span class="mini-emoji">☕</span>
+          <span class="mini-title">네이버 공식<br>카페</span>
         </a>
+      </div>
 
-        <div class="section-title">(주)여기건축사사무소 공식 채널</div>
-        
-        <a class="bigbutton" target="_blank" href="https://yugy.org">
-            🌐 공식 홈페이지 (yugy.org)
-        </a>
+      <a class="link-card" target="_blank" href="https://www.instagram.com/gny.group.archi/">
+        <div class="icon">📷</div>
+        <div class="text">
+          <span class="label">인스타그램 다시 보기</span>
+          <span class="desc">도면, 리모델링, 건축 전 사전진단 이야기를 계속 올립니다.</span>
+        </div>
+      </a>
+    </section>
 
-        <a class="bigbutton" target="_blank" href="https://yugy.store">
-            🛒 공식 스토어 (yugy.store)
-        </a>
-        <a class="bigbutton" target="_blank" href="https://www.instagram.com/gny.group.archi/">
-            📷 인스타그램 (@gny.group.archi)
-        </a>
-        <a class="bigbutton" target="_blank" href="https://cafe.naver.com/gnygroup/">
-            ☕ 네이버 공식 카페
-        </a>
-
-        <p class="source">© 2026 (주)여기건축사사무소.</p>
+    <div class="notice">
+      예쁜 집을 상상하기 전에, 먼저 확인해야 할 것이 있습니다.<br>
+      이 공사가 가능한지, 예산은 어디서 새는지, 도면과 법규에 위험은 없는지.<br>
+      스페이스 오디터와 도면소생술은 그 첫 단추를 위한 도구입니다.
     </div>
+
+    <p class="footer">
+      © 2026 (주)여기건축사사무소<br>
+      YUGY DESIGN GROUP
+    </p>
+
+  </main>
 </body>
 </html>
